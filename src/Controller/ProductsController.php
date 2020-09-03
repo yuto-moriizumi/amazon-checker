@@ -108,7 +108,7 @@ class ProductsController extends AppController
     {
         $products=json_encode($this->Products->find('all')->toArray());
         $this->set(compact('products'));
-        $this->layout = 'ajax';
+        $this->viewBuilder()->setLayout('ajax');
     }
 
     public function viewer()
