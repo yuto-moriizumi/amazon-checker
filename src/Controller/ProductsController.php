@@ -111,6 +111,14 @@ class ProductsController extends AppController
         $this->viewBuilder()->setLayout('ajax');
     }
 
+    public function getSite()
+    {
+        $url=$this->request->getQuery('url');
+        $site=htmlspecialchars(file_get_contents($url));
+        $this->set(compact('site'));
+        $this->viewBuilder()->setLayout('ajax');
+    }
+
     public function viewer()
     {
     }
