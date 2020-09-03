@@ -1,0 +1,3 @@
+bin\cake bake migration CreateProducts name:string[255] type:string[127] link_amazon_com:string[511] link_kakaku_com:string[511] link_mercari:string[511] modified
+
+bin\cake migrations migrate
